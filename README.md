@@ -6,7 +6,7 @@ Antes de comenzar a trabajar en esta practica se recomienda que lleve a cabo los
 1. Haga un fork de este repositorio.
 2. La persona que haga el fork agregue como colaborador al compañero de trabajo.
 3. Cada uno de los integrantes del equipo puede hacer una copia local del laboratorio con el fin de colaborar en su desarrollo.
-4. No olvide ir actualizando la practica del laboratorio a medida que vaya avanzando en esta. Para el caso, vaya llevando a cabo los test proporsionados (tal y como se explico en el laboratorio). Estos test serán el indicativo que digan como va su trabajo.
+4. No olvide ir actualizando la practica del laboratorio a medida que vaya avanzando en esta. Para el caso, vaya llevando a cabo los test proporcionados (tal y como se explico en el laboratorio). Estos test serán el indicativo que digan como va su trabajo.
 
 ## Componentes del laboratorio ##
 
