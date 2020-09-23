@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 
         if(pInFile == NULL){
             //  printf("wcat cannot open file %s\n", pFileName);
-             printf("wcat cannot open file \n");
+             printf("wcat: cannot open file\n");
             return 1;
         }
 
