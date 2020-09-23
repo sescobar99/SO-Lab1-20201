@@ -37,8 +37,8 @@ int main(int argc, char const *argv[])
             pInFile = fopen(pFileName, "r");
             if (pInFile == NULL)
             {
-                // printf("wgrep: cannot open filen");
-                perror("wgrep: cannot open filen");
+                printf("wgrep: cannot open file\n");
+                // perror("wgrep: cannot open file\n");
                 return 1;
             }
             while ((nread = getline(&buffer, &length, pInFile)) != -1)
