@@ -34,56 +34,36 @@ int main(int argc, char *argv[]) {
         return 1;
     }
     int i = 1;
-
     FILE *pInFile;
 
-
-    pInFile = fopen(argv[i],"r");
-    if (pInFile == NULL){
-        printf ( "Could not open file" ) ;
-        return 1;
-    }
-
-    
-    int count = 0;
-
-    char current=fgetc(pInFile);
-
-    char previous= current;
-
-    while(current != EOF){
-        if(previous == current){
-            count++;
-        }else{
-            fwrite(&count, sizeof(int), 1, stdout);
-            fwrite(&previous, sizeof(char), 1, stdout);
-            // printf("%d%c-",count, previous);
-            previous = current;
-            count = 1;
+    while(i < argc){
+        pInFile = fopen(argv[i],"r");
+        if (pInFile == NULL){
+            printf ( "Could not open file" ) ;
+            return 1;
         }
-        current =fgetc(pInFile);
-    }
-    fwrite(&count, sizeof(int), 1, stdout);
-    fwrite(&previous, sizeof(char), 1, stdout);
-    // printf("%d%c-",count, previous);
-    
-    // while((aux=fgetc(pInFile)) != EOF){
-
-    //     if(first){
-
-    //     }
-    //     if(last == aux){ //aumentar cuenta 
-    //         count++;
-    //     }else{ //cambio de caracter, imprima
-    //         // printf("\n%hx-",aux);
-    //         fwrite(&count, sizeof(int), 1, stdout);
-    //         fwrite(&aux, sizeof(char), 1, stdout);
-    //         count = 0;
-    //     }
-    //     last = aux;
+        int count = 0;
+        char current=fgetc(pInFile);
+        char previous= current;
+        while(current != EOF){
+            if(previous == current){
+                count++;
+            }else{
+                fwrite(&count, sizeof(int), 1, stdout);
+                fwrite(&previous, sizeof(char), 1, stdout);
+                // printf("%d%c-",count, previous);
+                previous = current;
+                count = 1;
+            }
+            current =fgetc(pInFile);
+        }
+        fwrite(&count, sizeof(int), 1, stdout);
+        fwrite(&previous, sizeof(char), 1, stdout);
+        // printf("%d%c-",count, previous);
         
-    // }
-    fclose(pInFile);
+        fclose(pInFile);
+        i++;
+    }
 
         //        FILE *fp ;
         //    char c ;
@@ -122,16 +102,5 @@ int main(int argc, char *argv[]) {
         //     }while(aux != EOF);
         //     // }while(1);
 
-        //     // Volviendo los argumentos necesarios a enteros
-        //     // int numbers = atoi(argv[2]);
-        //     // int max_num = atoi(argv[3]);
-        //     // // Escribiendo en el archivo
-        //     // for(int i = 0;i < numbers; i++) {
-        //     //     int num = generarNumero(max_num);
-        //     //     fwrite(&num, sizeof(int), 1, out_file);
-        //     // }
-
-        // fclose(pInFile);
-        // }
         return 0;
 }
