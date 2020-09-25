@@ -12,7 +12,8 @@ int main(int argc, char const *argv[])
 
     while(i < argc){
         //read
-        pFileName = argv[i];
+        pFileName = (char *) argv[i]; 
+        // pFileName = argv[i]; //preguntar conversion
         pInFile = fopen(pFileName,"r");
 
         if(pInFile == NULL){

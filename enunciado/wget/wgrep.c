@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
 {
     char *buffer = NULL;
     size_t length = 0;
-    ssize_t nread;
+    ssize_t nread; //preguntar
     ;
 
     if (argc == 1)
